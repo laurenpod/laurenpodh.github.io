@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<center><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 🌜My Class Portal🌛 </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.min.js"></script>
+</head>
+<h1 id="animated-heading">My Class Portal</h1>
+<h1>Lauren Podhorzer</h1>
+    <img src="raven.gif" alt="red blue green and white bird" width="200" height="130">
+<body> <br>
+    <i> <a href="records.html">my record collection</a></i>
+   <div class="symbol">✦</div>Short Coding Exercises:<div class="symbol">✦</div>
+    <ul> 
+        <li> <a href="recipe.html"> <span>mint</span> chocolate chip recipe</a> </li>
+        <li> <a href="zitirecipe.html">baked ziti recipe</a> </li>
+        <li> <a href="codejourney.html">code journey</a></li>
+        <li><a href="mediaquery.html">media query animation</a></li>
+        <li> <a href="gridtypeface.html">grid typeface</a></li>
+        <li> <a href="week-7-worksheet/1-intro-to-js-starter.htm">intro to javascript worksheet</a></li>
+        <li> <a href="randomfruit.html">random fruit generator</a></li>
+        <li> <a href="newschoollogo.html">new school logo generator</a></li>
+        <li><a href="clockdemo.html">clock demo</a></li>
+    </ul>
+</body>
+<p> ✦ Multi Week Coding Projects ✦ : </p>
+<ul>
+    <li>Project 1</li>
+    <a href="posterseries.html">interactive poster series 1</a>
+    <li><a href="posterseriestwo.html">interactive poster series 2</a></li>
+    <li><a href="posterseriesthree.html">interactive poster series 3</a></li>
+    <li>Project 2</li>
+    <li><a href="postersparttwo.html">interactive poster series (part two) 1</a></li>
+    <li><a href="postersparttwo2.html">interactive poster series (part two) 2</a></li>
+    <li><a href="postersparttwo3.html">interactive poster series (part two) 3</a></li>
+    <li>Project 3</li>
+    <li><a href="generativeidentity.html">generative identity (part two)</a></li>
+    <li><a href="generativeidentitytool.html">generative identity tool</a></li>
+    <li>Project 4</li>
+    <li><a href="timepiece.html">time piece</a></li>
+    <li><a href="clock2.html">radio clock</a></li>
+</ul><div class="symbol">✦</div>
+Socials:
+<br><a href="https://www.behance.net/laurenpod">behance</a>
+<br><a href="https://www.linkedin.com/in/laurenpod/">linkedin</a>
+<br>email: laurenpodhorzer@gmail.com
+<marquee>welcome to my site :)</marquee>
+<img src="owls.webp" alt="red blue green and white bird" width="200" height="130">
+<br><a href="snake.html">snake game</a>
+<br><a href="tictac.html">tic tac toe</a>
+<br><a href="cube.html">rubik's visualizer</a>
+</center>
+
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+<script type="text/javascript">
+    new cursoreffects.emojiCursor({ emoji: ["🎃", "👻", "💀", "🦇"] });
+
+    function setup() {
+  createCanvas(300, 300);
+  colorMode(HSB);  // Use HSB color mode to easily manipulate hue
+  angleMode(DEGREES); // Set angle mode to degrees
+  describe('Two eyes that follow the cursor.');
+}
+
+function draw() {
+    background(255, 0);  // White background (remove black background)
+
+  // Draw left eye
+  let leftX = 150;
+  let leftY = 200;
+
+  // Calculate angle between left eye and mouse
+  let leftAngle = atan2(mouseY - leftY, mouseX - leftX);
+
+  push();
+  translate(leftX, leftY);
+  fill(255);  // White part of the eye
+  ellipse(0, 0, 50, 50);  // Eye shape
+  rotate(leftAngle);
+
+  // Use the same color for the pupil
+  let c1 = color(220, 100, 100); // Blue color
+  for (let i = 0; i < 25; i++) {
+    fill(c1);
+    ellipse(12.5, 0, 25 - i * 0.5, 25 - i * 0.5); // Gradual shrinking of the pupil
+  }
+  pop();
+
+  // Draw right eye
+  let rightX = 250;
+  let rightY = 200;
+
+  // Calculate angle between right eye and mouse
+  let rightAngle = atan2(mouseY - rightY, mouseX - rightX);
+
+  push();
+  translate(rightX, rightY);
+  fill(255);  // White part of the eye
+  ellipse(0, 0, 50, 50);  // Eye shape
+  rotate(rightAngle);
+
+  // Use the same color for the pupil
+  let c2 = color(220, 100, 100); // Blue color
+  for (let i = 0; i < 25; i++) {
+    fill(c2);
+    ellipse(12.5, 0, 25 - i * 0.5, 25 - i * 0.5); // Gradual shrinking of the pupil
+  }
+  pop();
+}
+
+// Optional: You can add a delay for typing effect if needed
+
+document.addEventListener("DOMContentLoaded", () => {
+  const heading = document.getElementById("animated-heading");
+  let text = heading.textContent;
+  heading.textContent = ''; // Clear initial text content
+
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      heading.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 100); // Adjust speed of typing effect here
+    }
+  }
+  typeWriter();
+});
+
+
+</script>
+
+</body>
+</html>
+
+</script>
+
+</body>
+</html>
